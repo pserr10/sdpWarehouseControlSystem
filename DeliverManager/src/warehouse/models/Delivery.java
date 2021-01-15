@@ -4,15 +4,21 @@ public class Delivery{
 	
 	private Integer delivery_id;
 	private String delivery_address;
-	private Item item_id;
+	private Integer item_id;
+	private Integer quantity;
+
 	
-	
-	public Delivery(Integer delivery_id, String delivery_address) {
+	public Delivery(Integer delivery_id, String delivery_address, Integer item_id, Integer quantity) {
+		this(quantity, item_id, delivery_address);
 		this.delivery_id = delivery_id;
-		this.delivery_address = delivery_address;
 	}
 	
-	
+	public Delivery(int i, int j, String k) {
+		this.item_id = i;
+		this.quantity = j;
+		this.delivery_address = k;
+	}
+
 	public Integer getDelivery_id() {
 		return delivery_id;
 	}
@@ -25,11 +31,19 @@ public class Delivery{
 	public void setDelivery_address(String delivery_address) {
 		this.delivery_address = delivery_address;
 	}
-	public Item getItem_id() {
+	public int getItem_id() {
 		return item_id;
 	}
-	public void setItem_id(Item item_id) {
+	public void setItem_id(Integer item_id) {
 		this.item_id = item_id;
 	}
 	
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(Integer quantity) {
+		this.quantity = quantity;
+	}
+
 }
