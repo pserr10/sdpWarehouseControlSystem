@@ -17,6 +17,9 @@ import warehouse.dao.DepositDao;
 import warehouse.dao.DepositDaoImpl;
 import warehouse.dao.ItemDao;
 import warehouse.dao.ItemDaoImpl;
+import warehouse.models.Delivery;
+import warehouse.models.Deposit;
+import warehouse.models.Item;
 
 @Configuration
 @EnableWebMvc
@@ -44,17 +47,17 @@ public class SpringMvcConfig  implements WebMvcConfigurer{
 	}
 	
 	@Bean
-	public ItemDao getItemDao() {
+	public ItemDao<Item> getItemDao() {
 		return new ItemDaoImpl(getDataSource());
 	}
 	
 	@Bean
-	public DepositDao getDepositDao() {
+	public DepositDao<Deposit> getDepositDao() {
 		return new DepositDaoImpl(getDataSource());
 	}
 	
 	@Bean
-	public DeliveryDao getDeliveryDao() {
+	public DeliveryDao<Delivery> getDeliveryDao() {
 		return new DeliveryDaoImpl(getDataSource());
 	}
 

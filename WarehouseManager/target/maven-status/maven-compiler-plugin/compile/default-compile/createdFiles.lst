@@ -1,0 +1,16 @@
+warehouse\config\WebAppInitializer.class
+warehouse\dao\DepositDao.class
+warehouse\dao\DepositDaoImpl$1.class
+warehouse\controller\MainController.class
+warehouse\config\SpringMvcConfig.class
+warehouse\dao\ItemDaoImpl.class
+warehouse\models\Deposit.class
+warehouse\dao\ItemDaoImpl$1.class
+warehouse\dao\DeliveryDaoImpl$1.class
+warehouse\dao\ItemDao.class
+warehouse\models\Delivery.class
+warehouse\dao\DeliveryDao.class
+warehouse\dao\DeliveryDaoImpl.class
+warehouse\dao\ItemDaoImpl$2.class
+warehouse\models\Item.class
+warehouse\dao\DepositDaoImpl.class

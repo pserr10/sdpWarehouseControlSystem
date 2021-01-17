@@ -6,18 +6,22 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Repository;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-
+import javax.persistence.PersistenceContext;
 import javax.sql.DataSource;
 
-
+@Repository
 public class ItemDaoImpl implements ItemDao<Item> {
 	
-	@Autowired
+	
+	//ItemDao<Item> item;
 	// connect to databases using JDBC
+	@PersistenceContext
 	private JdbcTemplate jdbcTemplate;
 
 	public ItemDaoImpl(DataSource dataSource) {

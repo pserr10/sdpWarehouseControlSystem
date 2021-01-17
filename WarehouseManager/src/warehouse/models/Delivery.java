@@ -1,8 +1,17 @@
 package warehouse.models;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name ="deliveries")
 public class Delivery{
 	
-	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer delivery_id;
 	private String delivery_address;
 	private Integer item_id;
